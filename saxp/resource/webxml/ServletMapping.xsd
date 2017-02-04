@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.asushenya.org/servletMapping"
+		xmlns:tns="http://www.asushenya.org/servletMapping">
+
+		<complexType name="ServletMapping">
+			<sequence maxOccurs="2">
+				<element name="servlet-name" type="string"/>
+				<element name="url-pattern"  type="string"/>
+			</sequence>
+	</complexType>
+</schema>

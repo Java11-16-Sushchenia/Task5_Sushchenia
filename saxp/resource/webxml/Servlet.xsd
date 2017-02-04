@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.asushenya.org/servlet"
+		xmlns:tns="http://www.asushenya.org/servlet"
+		
+		xmlns:ip="http://www.asushenya.org/initParam">
+		
+		<import schemaLocation="InitParam.xsd" namespace="http://www.asushenya.org/initParam"/>
+
+		<complexType name="Servlet">
+			<sequence>
+				<element name="servlet-name"  type="string"/>
+				<element name="servlet-class" type="string"/>
+				<element name="init-param"    type="ip:InitParam" minOccurs="0"/>
+			</sequence>
+	</complexType>
+</schema>

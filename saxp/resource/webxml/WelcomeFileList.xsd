@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.asushenya.org/welcomeFileList"
+		xmlns:tns="http://www.asushenya.org/welcomeFileList">
+
+		<complexType name="WelcomeFileList">
+			<sequence maxOccurs="unbounded">
+				<element name="welcome-file" type="string"/>				
+			</sequence>
+		</complexType>
+</schema>

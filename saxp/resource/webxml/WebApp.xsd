@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+
+		targetNamespace="http://www.asushenya.org/WebApp"
+		xmlns:tns="http://www.asushenya.org/WebApp"
+			  
+	 	xmlns:wfl="http://www.asushenya.org/welcomeFileList"
+	 	xmlns:f  ="http://www.asushenya.org/filter"
+	 	xmlns:fm ="http://www.asushenya.org/filterMapping"
+	 	xmlns:l  ="http://www.asushenya.org/listener"
+	 	xmlns:s  ="http://www.asushenya.org/servlet"
+	 	xmlns:sm ="http://www.asushenya.org/servletMapping"
+	 	xmlns:ep ="http://www.asushenya.org/errorPage">
+	 	
+	 	<import schemaLocation="WelcomeFileList.xsd" namespace="http://www.asushenya.org/welcomeFileList"/>
+		<import schemaLocation="Filter.xsd"          namespace="http://www.asushenya.org/filter"		 />
+		<import schemaLocation="FilterMapping.xsd"   namespace="http://www.asushenya.org/filterMapping"  />
+		<import schemaLocation="Listener.xsd"   	 namespace="http://www.asushenya.org/listener"		 />
+		<import schemaLocation="Servlet.xsd"   		 namespace="http://www.asushenya.org/servlet"		 />
+		<import schemaLocation="ServletMapping.xsd"  namespace="http://www.asushenya.org/servletMapping" />
+		<import schemaLocation="ErrorPage.xsd" 		 namespace="http://www.asushenya.org/errorPage"		 />
+		
+		<element name="web-app">
+			<complexType>			
+					<choice minOccurs="0" maxOccurs="unbounded">
+						<element name="display-name" 	  type="string" 			 />
+						<element name="welcome-file-list" type="wfl:WelcomeFileList" />
+						<element name="filter" 			  type="f:Filter"			 />
+						<element name="filter-mapping"	  type="fm:FilterMapping" 	 />
+						<element name="listener" 		  type="l:Listener" 		 />
+						<element name="servlet"			  type="s:Servlet"			 />
+						<element name="servlet-mapping"	  type="sm:ServletMapping"	 />
+						<element name="error-page"		  type="ep:ErrorPage"		 />
+					</choice>					
+						<attribute name="id"	  		  type="string" />
+						<attribute name="version" 		  type="string" />
+			</complexType>
+		</element>
+		
+</schema>

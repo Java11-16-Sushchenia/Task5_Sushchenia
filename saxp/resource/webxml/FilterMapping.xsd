@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.asushenya.org/filterMapping"
+		xmlns:tns="http://www.asushenya.org/filterMapping">
+
+	<complexType name="FilterMapping">
+		<sequence maxOccurs="unbounded">
+			<element name="filter-name" type="string"/>
+			<element name="url-pattern" type="string"/>
+			<element name="dispatcher"  type="string"/>			
+		</sequence>
+	</complexType>
+</schema>

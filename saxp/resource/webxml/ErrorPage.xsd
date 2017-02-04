@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.asushenya.org/errorPage"
+		xmlns:tns="http://www.asushenya.org/errorPage">
+
+		<complexType name="ErrorPage">
+			<sequence>
+			<choice>
+				<element name="exception-type" type="string"/>
+				<element name="error-code" 	   type="string"/>						
+			</choice>
+				<element name="location" 	   type="string"/>	
+			</sequence>
+	</complexType>
+</schema>
